@@ -1,0 +1,50 @@
+git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart #quickstart 예제를 불러와 폴더에 생성
+
+# 1. localPC 에서 실행
+
+python -m venv .venv
+.venv\scripts\activate   
+pip install -r requirements.txt
+#로컬 pc에서 실행하기 위해 vsc로 명령어 입력
+
+flask run #실행
+ http://localhost:5000
+ 
+ 
+# 2. WEBAPP
+
+# AZURE 에서 웹엡 생성 후 VSC와 연동 (AZURE Extension 설치 후 App Services 에서 자신이 만든 웹엡 찾아서 deploying)
+
+# 3. 단일 데이터베이스 만들기
+# AZURE 에서 SQL database 생성 후 쿼리 편집기에서 작성->
+SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+FROM SalesLT.ProductCategory pc
+JOIN SalesLT.Product p
+ON pc.productcategoryid = p.productcategoryid;
+
+
+# 4. SSMS 사용하여 연결
+
+# SSMS 설치 후 SQL database 생성 시 ID PW 로 로그인, 옵션에서 DATABASE 선택 후 연결
+SELECT pc.Name as CategoryName, p.name as ProductName
+FROM [SalesLT].[ProductCategory] pc
+JOIN [SalesLT].[Product] p
+ON pc.productcategoryid = p.productcategoryid;
+#
+INSERT INTO [SalesLT].[Product]
+( [Name]
+, [ProductNumber]
+, [Color]
+, [ProductCategoryID]
+, [StandardCost]
+, [ListPrice]
+, [SellStartDate] )
+VALUES
+('myNewProduct'
+,123456789
+,'NewColor'
+,1
+,100
+,100
+,GETDATE() );
+#
