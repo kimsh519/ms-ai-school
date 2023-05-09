@@ -6,5 +6,5 @@
 
 2023-05-01 : clustering , dendrogram , sillhouette
 
-2023-05-09 : Activation_function , 
+2023-05-09 : Activation_function , Keras (mnist , moviereviewscore)
 
