@@ -8,4 +8,6 @@
 
 2023-05-09 : Activation_function , Keras (mnist , moviereviewscore)
 
+2023-05-10 : Keras ( k-fold, CNN )
+
 출처 : https://github.com/KoreaEva
