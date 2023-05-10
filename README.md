@@ -8,3 +8,4 @@
 
 2023-05-09 : Activation_function , Keras (mnist , moviereviewscore)
 
+출처 : https://github.com/KoreaEva
